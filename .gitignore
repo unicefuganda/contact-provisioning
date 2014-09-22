@@ -1,4 +1,4 @@
-vagrant/.vagrant/
+vagrant/.vagrant/machines/default/virtualbox
 contact-provisioning.iml
 pom.xml
 src/
