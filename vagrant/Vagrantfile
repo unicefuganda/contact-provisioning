@@ -1,0 +1,27 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "contact"
+
+  # Change this path to point to your own downloaded ubuntu-14.04 vagrant image
+  # You can download one from here: https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+
+  config.vm.box_url = "~/work/ubuntu-14.04.box"
+  
+  config.vm.network :forwarded_port, guest: 80, host: 8007
+
+  # All paths relative to Vagrantfile
+
+  config.vm.provision :chef_solo do |chef|
+    chef.cookbooks_path = "../chef/cookbooks"
+    chef.roles_path = "../chef/roles"
+    chef.add_recipe "users"
+    chef.add_recipe "tools"
+    chef.add_recipe "nodeapp"
+    chef.add_recipe "mongodb"
+    chef.add_recipe "nginx"
+  end
+
+end
