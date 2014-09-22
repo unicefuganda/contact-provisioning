@@ -7,12 +7,12 @@ upstream contact_service {
 server {
    listen 80;
    server_name 127.0.0.1;
-   passenger_app_root /home/contacts/app;
+   passenger_app_root /home/contact/app;
    passenger_enabled on;
    client_max_body_size 25M;
 
    passenger_app_type node;
    passenger_startup_file server.js;
 
-   passenger_restart_dir /contacts/tmp;
+   passenger_restart_dir /contact/tmp;
  }
