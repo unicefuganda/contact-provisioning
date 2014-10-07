@@ -9,6 +9,5 @@
   	"recipe[nodeapp]",
   	"recipe[mongodb]",
   	"recipe[nginx]"
-
   ]
 }
