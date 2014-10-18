@@ -1,6 +1,6 @@
 {
-  "name": "all_in_one",
-  "description": "All in one server for eums",
+  "name": "all",
+  "description": "General role for contacts service provisioning all environments",
   "json_class": "Chef::Role",
   "chef_type": "role",
   "run_list": [

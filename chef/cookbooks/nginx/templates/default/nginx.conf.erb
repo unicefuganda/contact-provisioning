@@ -19,9 +19,9 @@
         client_body_buffer_size 32k; #this is denotes max http request buffer size, django request buffers can be quite large
         client_max_body_size 20M; #this is indicated the the line Content-Length in http headers and analogous to file upload size
 
-         passenger_root /usr/lib/ruby/vendor_ruby/phusion_passenger/locations.ini;
-         passenger_ruby /usr/bin/ruby1.9.1;
-        
+        passenger_root /usr/lib/ruby/vendor_ruby/phusion_passenger/locations.ini;
+        passenger_ruby /usr/bin/ruby1.9.1;
+
         #these directives cover information about open files, for example last opened time, last modified time, we cache this info for a short time to limit
         open_file_cache max=200000 inactive=20s;
         open_file_cache_valid    30s;

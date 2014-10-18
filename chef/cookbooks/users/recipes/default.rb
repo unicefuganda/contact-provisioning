@@ -12,7 +12,7 @@ user "contact" do
   supports :manage_home=>true
 end
 
-directory "/home/contact" do   
+directory "/home/contact" do
   owner "contact"
   group "contact"
   mode "0755"

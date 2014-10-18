@@ -1,9 +1,7 @@
-# IP which nodejs is running on
 upstream contact_service {
     server 127.0.0.1:8005;
 }
 
-# nginx server instance
 server {
    listen 8005;
    server_name 127.0.0.1;
