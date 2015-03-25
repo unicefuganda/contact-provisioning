@@ -1,12 +1,12 @@
-directory "/home/contact" do
-  owner "contact"
-  group "contact"
+directory "/var/www/somalia" do
+  owner "www-data"
+  group "www-data"
   mode "0755"
   action :create
 end
 
-git "/home/contact/" do
-  user "contact"
+git "/var/www/somalia/" do
+  user "www-data"
   repository "https://github.com/unicefuganda/contacts.git"
   reference "master"
   revision "HEAD"
@@ -18,12 +18,12 @@ execute "Install npm dependencies" do
   command "npm install"
 end
 
-directory "/var/log/contact" do
+directory "/var/log/contacts" do
   recursive true
   action :delete
 end
 
-directory "/var/log/contact" do
+directory "/var/log/contacts" do
   recursive true
   action :create
 end
