@@ -1,11 +1,11 @@
-directory "/var/www/somalia" do
+directory "/var/www" do
   owner "www-data"
   group "www-data"
   mode "0755"
   action :create
 end
 
-git "/var/www/somalia/" do
+git "/var/www/" do
   user "www-data"
   repository "https://github.com/unicefuganda/contacts.git"
   reference "master"
