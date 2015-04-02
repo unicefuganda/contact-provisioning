@@ -1,11 +1,11 @@
-directory "/var/www" do
+directory "/var/www/contact" do
   owner "www-data"
   group "www-data"
   mode "0755"
   action :create
 end
 
-git "/var/www/" do
+git "/var/www/contact/" do
   user "www-data"
   repository "https://github.com/unicefuganda/contacts.git"
   reference "master"
@@ -14,7 +14,7 @@ git "/var/www/" do
 end
 
 execute "Install npm dependencies" do
-  cwd "/home/contact"
+  cwd "/var/www/contact"
   command "npm install"
 end
 
